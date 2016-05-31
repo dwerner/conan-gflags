@@ -33,7 +33,7 @@ class gflagsConan(ConanFile):
         self.copy("FindGflags.cmake", ".", ".")
 
         # Copying headers
-        self.copy(pattern="*.h", dst="include", src="%s/include" % self.unzipped_name, keep_path=True)
+        self.copy(pattern="*.h", dst="include", src="include", keep_path=True)
 
         libdir = "lib"
         # Copying static and dynamic libs

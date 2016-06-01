@@ -26,7 +26,7 @@ class gflagsConan(ConanFile):
     def build(self):
         cmake = CMake(self.settings)
         self.run("cmake %s/%s %s" % (self.conanfile_directory, self.unzipped_name, cmake.command_line))
-        self.run("cmake --build . %s" % cmake.build_config)
+        self.run("cmake -DCMAKE_CXX_FLAGS=\"-D_GLIBCXX_USE_CXX11_ABI=0\" --build . %s" % cmake.build_config)
 
     def package(self):
         # Copy findgflags script into project

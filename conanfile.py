@@ -13,7 +13,7 @@ class gflagsConan(ConanFile):
     default_options = "shared=False"
     url="http://github.com/dwerner/conan-gflags"
     license="https://github.com/gflags/gflags/blob/master/COPYING.txt"
-    exports="FindGflags.cmake"
+    exports="FindGflags.cmake", "change_dylib_names.sh"
     zip_name = "v%s.tar.gz" % version
     unzipped_name = "gflags-%s" % version
 

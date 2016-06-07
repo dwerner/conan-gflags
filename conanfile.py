@@ -26,10 +26,8 @@ class gflagsConan(ConanFile):
     def build(self):
         cmake = CMake(self.settings)
         c1 ="cmake -DCMAKE_CXX_FLAGS=\"-D_GLIBCXX_USE_CXX11_ABI=0 -std=c++0x\" %s/%s %s" % (self.conanfile_directory, self.unzipped_name, cmake.command_line)
-        print c1
         self.run(c1)
         c2 = "cmake --build . %s" % cmake.build_config
-        print c2 
         self.run(c2)
         
 

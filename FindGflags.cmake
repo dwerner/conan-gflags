@@ -7,7 +7,7 @@
 
 find_path(
 	GFLAGS_INCLUDE_DIR
-	NAMES gflags.h
+	NAMES gflags/gflags.h
 	PATHS ${CONAN_INCLUDE_DIRS_GFLAGS}
 )
 

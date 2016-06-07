@@ -12,7 +12,7 @@ class gflagsConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     url="http://github.com/dwerner/conan-gflags"
-    license="https://www.apache.org/licenses/LICENSE-2.0"
+    license="https://github.com/gflags/gflags/blob/master/COPYING.txt"
     exports="FindGflags.cmake"
     zip_name = "v%s.tar.gz" % version
     unzipped_name = "gflags-%s" % version

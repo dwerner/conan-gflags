@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/dwerner/conan-gflags.svg)](https://travis-ci.org/dwerner/conan-gflags)
-
-
 # conan-gflags
 
 [Conan.io](https://conan.io) package for gflags library
@@ -13,20 +10,20 @@ Download conan client from [Conan.io](https://conan.io) and run:
     
 ## Upload packages to server
 
-    $ conan upload gflags/0.13.3@dwerner/stable --all
+    $ conan upload gflags/2.1.2@dwerner/testing --all
     
 ## Reuse the packages
 
 ### Basic setup
 
-    $ conan install gflags/0.13.3@dwerner/stable
+    $ conan install gflags/2.1.2@dwerner/testing
     
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
     
     [requires]
-    gflags/0.13.3@dwerner/testing
+    gflags/2.1.2@dwerner/testing
 
     [options]
     gflags:shared=true # false
